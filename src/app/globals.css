@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f8fc;
+  --foreground: #0b1a4a;
+
+  --color-ink: #0b1a4a;
+  --color-cream: #ffffff;
+  --color-cream-soft: #eef2fb;
+
+  --color-navy-950: #060f2e;
+  --color-navy-900: #0b1a4a;
+  --color-navy-800: #122763;
+  --color-navy-700: #1b3a8f;
+  --color-navy-600: #2548b8;
+
+  --color-azure-600: #2548b8;
+  --color-azure-500: #3e6bf0;
+  --color-azure-400: #6e93f5;
+  --color-azure-200: #c7d6fb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--color-ink);
+  --color-cream: var(--color-cream);
+  --color-cream-soft: var(--color-cream-soft);
+  --color-navy-950: var(--color-navy-950);
+  --color-navy-900: var(--color-navy-900);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-700: var(--color-navy-700);
+  --color-navy-600: var(--color-navy-600);
+  --color-azure-600: var(--color-azure-600);
+  --color-azure-500: var(--color-azure-500);
+  --color-azure-400: var(--color-azure-400);
+  --color-azure-200: var(--color-azure-200);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
