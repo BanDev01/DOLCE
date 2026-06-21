@@ -69,7 +69,7 @@ export default function Gallery() {
           {images.map((img) => (
             <div
               key={img.src}
-              className={`relative min-h-[160px] overflow-hidden rounded-2xl ${img.span}`}
+              className={`relative min-h-40 overflow-hidden rounded-2xl ${img.span}`}
             >
               <Image
                 src={img.src}

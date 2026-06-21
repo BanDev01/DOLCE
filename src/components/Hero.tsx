@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="accueil"
-      className="relative isolate flex min-h-[100vh] items-center overflow-hidden bg-navy-950"
+      className="relative isolate flex min-h-screen items-center overflow-hidden bg-navy-950"
     >
       <div className="absolute inset-0">
         <Image
