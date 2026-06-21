@@ -9,6 +9,11 @@ export const company = {
   email: "contact@ladolcevita.cd", // à remplacer par le vrai email
   ceoName: "Rachel Molo Aza",
   ceoTitle: "Directrice Générale",
+  ceoLinkedIn: "https://www.linkedin.com/in/rachel-molo-aza-b2693a215/",
+  developer: {
+    name: "Bertin Ngongo",
+    url: "https://bandev01.github.io/portfolio",
+  },
 };
 
 export const services = [

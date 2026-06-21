@@ -55,7 +55,15 @@ export default function About() {
               <p className="font-display text-base text-cream">
                 {company.ceoName}
               </p>
-              <p className="text-sm text-azure-400">{company.ceoTitle}</p>
+              <p className="text-sm text-cream/60">{company.ceoTitle}</p>
+              <a
+                href={company.ceoLinkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-azure-400 hover:text-azure-200 underline underline-offset-2"
+              >
+                En savoir plus
+              </a>
             </div>
           </div>
         </div>
