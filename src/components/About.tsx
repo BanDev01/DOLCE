@@ -68,37 +68,32 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="space-y-6">
-          <div className="relative h-72 overflow-hidden rounded-2xl sm:h-80">
-            <Image
-              src="/images/equipe.jpg"
-              alt="L'équipe La Dolce Vita devant un immeuble entretenu à Goma"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[center_75%]"
-            />
-          </div>
-
-          {values.map((value, i) => (
-            <div
-              key={value.title}
-              className="flex gap-5 rounded-2xl border border-cream/10 bg-cream/4 p-6"
-            >
-              <span className="font-display flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-azure-500/15 text-lg text-azure-400">
-                0{i + 1}
-              </span>
-              <div>
-                <h3 className="font-display text-lg text-cream">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-8 border-t border-cream/15 pt-8">
+            {values.map((value, i) => (
+              <div key={value.title}>
+                <p className="font-display text-sm text-azure-400">
+                  0{i + 1}
+                </p>
+                <h3 className="font-display mt-2 text-base text-cream">
                   {value.title}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-cream/70">
+                <p className="mt-1.5 text-sm leading-relaxed text-cream/65">
                   {value.description}
                 </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        <div className="relative overflow-hidden rounded-2xl">
+          <Image
+            src="/images/equipe.jpg"
+            alt="L'équipe La Dolce Vita devant un immeuble entretenu à Goma"
+            width={810}
+            height={1080}
+            className="w-full"
+          />
         </div>
       </div>
     </section>
