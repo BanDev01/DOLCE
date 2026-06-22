@@ -7,6 +7,7 @@ export const company = {
   foundedYear: 2021,
   whatsapp: "243900000000", // à remplacer par le vrai numéro
   email: "contact@ladolcevita.cd", // à remplacer par le vrai email
+  linkedin: "https://www.linkedin.com/company/etsladolcevita/",
   ceoName: "Rachel Molo Aza",
   ceoTitle: "Directrice Générale",
   ceoLinkedIn: "https://www.linkedin.com/in/rachel-molo-aza-b2693a215/",
