@@ -10,7 +10,7 @@ const stats = [
 export default function About() {
   return (
     <section id="apropos" className="bg-navy-950 py-24 sm:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-azure-400">
             À propos de nous
@@ -30,52 +30,54 @@ export default function About() {
             de nos interventions.
           </p>
 
-          <div className="mt-10 grid grid-cols-3 gap-6 border-t border-cream/15 pt-8">
-            {stats.map((stat) => (
-              <div key={stat.label}>
-                <p className="font-display text-3xl text-azure-400">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-wide text-cream/60">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
+          <div className="mt-10 border-t border-cream/15 pt-8">
+            <div className="grid grid-cols-3 gap-6">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <p className="font-display text-3xl text-azure-400">
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-xs uppercase tracking-wide text-cream/60">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
 
-          <div className="mt-10 flex items-center gap-4 border-t border-cream/15 pt-8">
-            <Image
-              src="/images/ceo.jpg"
-              alt={`${company.ceoName}, ${company.ceoTitle} de ${company.name}`}
-              width={64}
-              height={64}
-              className="rounded-full object-cover h-16 w-16"
-            />
-            <div>
-              <p className="font-display text-base text-cream">
-                {company.ceoName}
-              </p>
-              <p className="text-sm text-cream/60">{company.ceoTitle}</p>
-              <a
-                href={company.ceoLinkedIn}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-azure-400 hover:text-azure-200 underline underline-offset-2"
-              >
-                En savoir plus
-              </a>
+            <div className="mt-8 flex items-center gap-4">
+              <Image
+                src="/images/ceo.jpg"
+                alt={`${company.ceoName}, ${company.ceoTitle} de ${company.name}`}
+                width={64}
+                height={64}
+                className="rounded-full object-cover h-16 w-16"
+              />
+              <div>
+                <p className="font-display text-base text-cream">
+                  {company.ceoName}
+                </p>
+                <p className="text-sm text-cream/60">{company.ceoTitle}</p>
+                <a
+                  href={company.ceoLinkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-azure-400 hover:text-azure-200 underline underline-offset-2"
+                >
+                  En savoir plus
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="space-y-6">
-          <div className="relative overflow-hidden rounded-2xl">
+          <div className="relative h-72 overflow-hidden rounded-2xl sm:h-80">
             <Image
               src="/images/equipe.jpg"
               alt="L'équipe La Dolce Vita devant un immeuble entretenu à Goma"
-              width={810}
-              height={1080}
-              className="w-full"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover object-[center_75%]"
             />
           </div>
 
