@@ -23,7 +23,7 @@ export default function Hero() {
           sizes="100vw"
           className="object-cover object-top opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/85 to-navy-950" />
+        <div className="absolute inset-0 bg-linear-to-b from-navy-950/80 via-navy-950/85 to-navy-950" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 pt-28 pb-20">
